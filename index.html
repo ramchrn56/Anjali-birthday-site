@@ -4,6 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Happy Birthday Anjali ❤️</title>
 
 <style>
@@ -21,6 +22,7 @@ body {
 }
 
 /* PASSWORD SCREEN */
+
 #lockScreen {
     min-height: 100vh;
     display: flex;
@@ -46,7 +48,8 @@ body {
     margin: 15px;
 }
 
-#lockScreen button {
+#lockScreen button,
+button {
     background: #ff4f91;
     color: white;
     border: none;
@@ -54,6 +57,7 @@ body {
     border-radius: 30px;
     font-size: 17px;
     cursor: pointer;
+    margin: 20px;
 }
 
 #error {
@@ -61,7 +65,8 @@ body {
     margin: 15px;
 }
 
-/* BIRTHDAY WEBSITE */
+/* MAIN WEBSITE */
+
 #mainWebsite {
     display: none;
 }
@@ -92,17 +97,6 @@ p {
     font-size: 18px;
 }
 
-button {
-    background: #ff4f91;
-    color: white;
-    border: none;
-    padding: 14px 28px;
-    border-radius: 30px;
-    font-size: 17px;
-    cursor: pointer;
-    margin: 20px;
-}
-
 section {
     padding: 60px 20px;
 }
@@ -116,20 +110,78 @@ section {
     line-height: 2;
 }
 
+/* PHOTO AND VIDEO GALLERY */
+
 .gallery {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
     gap: 20px;
-    margin-top: 30px;
+    margin: 30px auto 0;
+    max-width: 850px;
+    overflow-x: auto;
+    padding: 10px;
 }
 
-.gallery img {
+.gallery img,
+.gallery video {
     width: 250px;
     height: 280px;
+    min-width: 250px;
     object-fit: cover;
     border-radius: 18px;
     border: 3px solid pink;
+}
+
+.gallery video {
+    background: black;
+}
+
+/* SURPRISE BOX */
+
+.surprise-box {
+    max-width: 600px;
+    margin: 25px auto;
+    padding: 25px;
+    background: rgba(255,255,255,0.12);
+    border: 2px solid pink;
+    border-radius: 20px;
+    animation: fadeIn 1s ease;
+}
+
+.surprise-box h2 {
+    color: #ffb6d5;
+}
+
+.surprise-box h3 {
+    color: #ffc1da;
+    margin: 20px 0;
+}
+
+.call-button {
+    display: inline-block;
+    background: #ff4f91;
+    color: white;
+    text-decoration: none;
+    padding: 14px 25px;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+
+.call-button:hover {
+    background: #ff1493;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 footer {
@@ -137,14 +189,22 @@ footer {
     color: pink;
 }
 
+/* MOBILE SCREEN */
+
 @media(max-width:600px) {
     h1 {
         font-size: 32px;
     }
 
-    .gallery img {
-        width: 90%;
-        max-width: 280px;
+    .gallery {
+        gap: 12px;
+    }
+
+    .gallery img,
+    .gallery video {
+        width: 220px;
+        min-width: 220px;
+        height: 260px;
     }
 }
 </style>
@@ -152,10 +212,13 @@ footer {
 
 <body>
 
-<!-- PASSWORD LOCK -->
+<!-- PASSWORD SCREEN -->
+
 <div id="lockScreen">
     <div style="font-size:70px;">🌹</div>
+
     <h1>A Special Surprise For You ❤️</h1>
+
     <p>Someone has prepared something special for you...</p>
 
     <input
@@ -172,10 +235,13 @@ footer {
 </div>
 
 <!-- MAIN WEBSITE -->
+
 <div id="mainWebsite">
 
 <div class="hero">
+
     <h1>Happy Birthday Anjali ❤️</h1>
+
     <h2>My Special Person 🥰</h2>
 
     <p>
@@ -188,43 +254,70 @@ footer {
         Open Your Surprise 🎁
     </button>
 
-    <p id="surprise"></p>
+    <div id="surprise"></div>
+
 </div>
 
+<!-- LETTER -->
+
 <section>
+
     <h2>A Letter For You 💌</h2>
+
     <div class="letter">
         <p>
         Dear Anjali ❤️
         <br><br>
+
         Happy Birthday to the most special person!
+
         I don't know how to express all my feelings
         in words, but I want you to know that
         you are a beautiful memory in my life.
+
         May your life always be full of happiness,
         love, success and beautiful moments.
+
         Keep smiling, keep shining and always
         be happy.
+
         <br><br>
+
         With lots of love ❤️
         <br>
         Yours Always
         </p>
     </div>
+
 </section>
 
+<!-- PHOTO VIDEO PHOTO GALLERY -->
+
 <section>
+
     <h2>Our Beautiful Memories 📸</h2>
+
     <p>Some moments are too special to forget ❤️</p>
 
     <div class="gallery">
+
         <img src="anjaliji0002.jpg" alt="Memory 1">
+
+        <video controls playsinline preload="metadata">
+            <source src="anjaliji0004.MP4" type="video/mp4">
+            Your browser does not support video.
+        </video>
+
         <img src="anjaliji0003.jpg" alt="Memory 2">
-        <img src="anjaliji0001.jpg" alt="Memory 3">
+
     </div>
+
 </section>
 
+<!-- WISHES -->
+
 <section>
+
     <h2>My Wishes For You 🌹</h2>
 
     <div class="letter">
@@ -236,12 +329,17 @@ footer {
         🎂 Have the most beautiful birthday!
         </p>
     </div>
+
 </section>
 
+<!-- HINDI WISHES -->
+
 <section>
+
     <h2>❤️ कुछ खास बातें तुम्हारे लिए ❤️</h2>
 
     <div class="letter">
+
         <h2>Happy Birthday Anjali 🎂</h2>
 
         <p>
@@ -270,8 +368,11 @@ footer {
         </p>
 
         <h2>Happy Birthday Anjali ❤️</h2>
+
         <p>ढेर सारी शुभकामनाओं के साथ ❤️</p>
+
     </div>
+
 </section>
 
 <footer>
@@ -282,23 +383,66 @@ footer {
 
 </div>
 
+<!-- JAVASCRIPT -->
+
 <script>
+
 function unlockWebsite() {
+
     const password = document.getElementById("password").value;
 
     if (password === "time158") {
+
         document.getElementById("lockScreen").style.display = "none";
+
         document.getElementById("mainWebsite").style.display = "block";
+
     } else {
+
         document.getElementById("error").innerText =
             "Wrong Password! Please Try Again ❤️";
+
     }
+
 }
 
 function showSurprise() {
-    document.getElementById("surprise").innerHTML =
-        "You are truly special! Happy Birthday Anjali! ❤️🎂🌹";
+
+    document.getElementById("surprise").innerHTML = `
+
+        <div class="surprise-box">
+
+            <h2>One More Surprise For You ❤️</h2>
+
+            <p>
+                You are truly special!
+                Happy Birthday Anjali! ❤️🎂🌹
+            </p>
+
+            <h3>💌 A Special Video Call Note</h3>
+
+            <p>
+                I wish I could see your smile
+                and wish you Happy Birthday in person.
+
+                Let's make a beautiful memory together. ❤️
+            </p>
+
+            <a href="YOUR_VIDEO_CALL_LINK"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="call-button">
+
+               📹 Let's Talk on Video Call
+
+            </a>
+
+        </div>
+
+    `;
+
 }
+
 </script>
 
 </body>
